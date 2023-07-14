@@ -56,8 +56,38 @@ Editor: Tab Size 는 2로 변경
 이미 작성한 코드는 드래그 해서 마우스 오른쪽 클릭으로 나타나는 메뉴에서 Fomat Document 선택하면 적용
 ```
 
+함수(Function)
+```
+//함수 선언
+function functionName() {
+    command;
+    command;
+};
 
+//함수 호출
+functionName();
+```
 
+매개변수(Parameter)
+```
+function funcName(parameter) {
+    console.log(parameter);
+}
+
+funcName('Hola');
+```
+
+return
+```
+function funcName(parameter) {
+    return parameter * 2 ;
+}
+
+let x = funcName(5);
+console.log(x);
+
+console.log(funcName(5));
+```
 
 
 
