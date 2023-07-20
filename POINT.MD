@@ -81,3 +81,31 @@ Boolean() //falsy : ``, 0, NaN
 동등, 부등(==, !=) -> 동등, 부등 연산만 숫자형으로 자동 행변환하여 계산 
 ```
 
+템플릿 문자열(template strings)
+```
+let year = 2018;
+let month = 3;
+let day = 11;
+console.log(`생년월일은 ${year}년 ${month}월 ${day}일 입니다.`)
+
+let myNumber = 3;
+function getTwice(x) {
+  return x * 2;
+}
+console.log(`${myNumber}의 두 배는 ${getTwice(myNumber)}입니다.`)
+
+템플릿 문자열을 쓰시려면 ' 와 같은 single quote 가 아니라 `(backtick)을
+```
+
+null, undefined
+```
+null : 값이 없다고 의도적으로 표현
+undefined : 프로그램 실행 결과로 값이 없다는 것을 확인
+```
+
+할당 연산자(Assignment operators)
+```
+let left = 5, right =3;
+left = left + right;
+오른쪽의 피연산자를 왼쪽의 피연산자에 할당
+```
