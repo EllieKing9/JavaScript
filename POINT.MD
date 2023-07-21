@@ -109,3 +109,72 @@ let left = 5, right =3;
 left = left + right;
 오른쪽의 피연산자를 왼쪽의 피연산자에 할당
 ```
+
+복합 할당 연산자(Compound assignment operators), 
+증가(increment), 감소(decrement) 연산자
+```
+x = x + 1; -> x += 1 -> x++
+x = x - 1; -> x -= 1 -> x--
+x *= 2, x /= 2, x %= 7
+```
+
+함수의 옵셔널 파라미터와 return문
+```
+function sayHello(name) {
+  console.log(`안녕하세요 ${name}님!`);
+}
+sayHello(); -> 안녕하세요 undefined님! 이 로그에 출력
+let x;
+console.log(x); -> undefined 가 로그에 출력
+console.log(sayHello('코드잇최고')); -> undefined 가 로그에 출력
+
+Optional Parameter ==> 선언할 때 파라미터 중 가장 뒤쪽!!!에 선언
+function sayHello(name = '코드잇') {
+  console.log(`안녕하세요 ${name}님!`);
+}
+```
+
+변수의 범위와 영역(Scope)
+```
+블록문(Block Statement)안에서만 유효한
+로컬, 지역 변수(Local Variable)와
+블록문을 포함한 좀 더 큰 영역에서 유효한
+전역 변수(Global Variable)로 구분
+```
+
+상수(constant)
+```
+let myNumber = 3.14; -> const MY_NUMBER = 3.14;
+```
+
+if문(if statement)
+```
+//등호 세 개를 사용해 일치 비교
+```
+switch문(switch statement)
+```
+//값들을 비교할 때 자료형을 엄격하게 구분
+let myChoice = 1;
+switch(myChoice){
+  case 1:
+    console.log('1를 선택');
+    break;
+  case 2:
+    console.log('2를 선택');
+    break;
+  default:
+    console.log('수고하셨습니다.');
+}
+```
+반복문(loop statement)
+```
+function printTriangle(height) {
+	let message = '';
+	for(let i = 1; i <= height; i++){
+	  message += '*';
+	  console.log(message);
+	}
+}
+```
+
+
