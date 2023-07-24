@@ -168,6 +168,7 @@ switch(myChoice){
 ```
 반복문(loop statement)
 ```
+//for문
 function printTriangle(height) {
 	let message = '';
 	for(let i = 1; i <= height; i++){
@@ -175,6 +176,11 @@ function printTriangle(height) {
 	  console.log(message);
 	}
 }
+
+//while문
+
+//bresk;, continue;
 ```
+
 
 
