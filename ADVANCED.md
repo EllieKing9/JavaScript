@@ -40,7 +40,67 @@ objectName['propertyName']['propertyName']
 objectName.newPropertyName
 
 //삭제
-if(propertyName in objectName) {
+if('propertyName' in objectName) {
   delete objectName.propertyName
 }
+```
+
+메소드(Method)
+```
+let myVoca = {
+  addVoca: function(word, meaning) {
+    // myVoca[`${word}`] = meaning;
+    myVoca[word] = meaning;
+  },
+  deleteVoca: function(word) {
+    // delete myVoca[`${word}`];
+    delete myVoca[word];
+  },
+  printVoca: function(word) {
+    // console.log(`"${word}"의 뜻은 "${myVoca[`${word}`]}"입니다.`);
+    console.log(`"${word}"의 뜻은 "${myVoca[word]}"입니다.`)
+  }
+};
+
+myVoca.addVoca('parameter', '매개 변수');
+myVoca.addVoca('element', '요소');
+myVoca.addVoca('property', '속성');
+console.log(myVoca);
+
+myVoca.deleteVoca('parameter');
+myVoca.deleteVoca('element');
+console.log(myVoca);
+
+myVoca.printVoca('property');
+```
+
+for..in 반복문
+```
+let myObject = {
+  '3': '정수3',
+  name: 'codeit',
+  '1': '정수1',
+  birthDay: '2017.5.17',
+  '2': '정수2',
+  300: '정수',
+  1.2: '소수',
+};
+//기본적으로 key값(프로퍼티 네임)은 문자열로 형 변환되어 사용
+//다만 정수형 key값(프로퍼티 네임)은 오름차순으로 먼저 정렬되어 사용
+
+for (let key in myObject) {
+  console.log(key);
+}
+
+console.log(myObject[1.2]);
+
+->
+1
+2
+3
+300
+name
+birthDay
+1.2
+소수
 ```
