@@ -104,3 +104,27 @@ birthDay
 1.2
 소수
 ```
+
+내장객체(Standard built-in objects)
+```
+// Date
+let myDate = new Date(2023, 6, 26, 22, 58, 00);
+//let myDate = new Date('2023-07-26T22:58:00');
+
+console.log(Date.now());
+console.log(myDate.getTime()); //타임스탬프(time stamp)
+//time stamp : 1970년 1월 1일 00:00:000 UTC 부터 몇 밀리초 지났는지
+
+.getFullYear()
+.getmonth() //return 0 ~ 11
+.getDate()
+.getDay() //return 0 ~ 6(일~토)
+.getHours()
+.getMinutes()
+.getSeconds()
+.getMilliseconds()
+
+.toLocaleDateString()
+.toLocaleTimeString()
+.toLocaleString()
+```
