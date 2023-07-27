@@ -143,7 +143,19 @@ function workDayCalc(startDate) {
 workDayCalc(jaeSangStart);
 ```
 
-배열
+배열(array)과 요소(element)의 인덱스(index)
+```
+let members = [`짜장면`, '짬뽕', '탕수육']
+
+members.length //members['length']
+
+members.splice(members.length - 1, 1) -> members.pop //[`짜장면`, '짬뽕']
+members.splice(members.length, 0, '곱배기') -> members.push('곱배기') //[`짜장면`, '짬뽕', '탕수육', '곱배기']
+members.splice(0, 1) -> members.shift() //['짬뽕', '탕수육']
+members.splice(0, 0, '양파') -> members.unshift('양파') //['양파', '짜장면', '짬뽕', '탕수육']
+
+members.splice(0, 1, '단무지', '양파') //['단무지', '양파', '짬뽕', '탕수육']
+members.splice(1, 0, '단무지') //[`짜장면`, '단무지', '짬뽕', '탕수육']
 ```
 
-```
+
