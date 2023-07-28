@@ -158,4 +158,85 @@ members.splice(0, 1, '단무지', '양파') //['단무지', '양파', '짬뽕', 
 members.splice(1, 0, '단무지') //[`짜장면`, '단무지', '짬뽕', '탕수육']
 ```
 
+배열 메소드
+```
+let brands = ['Google', 'Kakao', 'Naver', 'Kakao'];
+console.log(brands.indexOf('Kakao')); //1
+console.log(brands.indexOf('Daum')); //-1
+
+console.log(brands.lastIndexOf('Kakao')); //3
+console.log(brands.lastIndexOf('Daum')); //-1
+
+console.log(brands.includes('Kakao')); //true
+console.log(brands.includes('Daum')); //false
+
+brands.reverse(); //["Kakao", "Naver", "Kakao", "Google"]
+```
+
+for ... of 반복문
+```
+let influencer = ['insta', 'face', 'twitter'];
+
+for(let element of influencer) {
+  console.log(element);
+}
+```
+
+다차원 배열(multidimensional array)
+```
+let multiArray = [[0, 1], [2, 3], [4, 5], [6, 7]];
+console.log(multiArray[0][0]);
+console.log(multiArray[1][0]);
+console.log(multiArray[0][1]);
+console.log(multiArray[1][1]);
+```
+
+다양한 숫자 표기법
+```
+//지수표기법
+1e3 === 1000 //true
+3.5e-3 === 0.0035 //true
+-9.1e-5 === -0.000091 //true
+
+//16진법(Hexadecimal)
+0xff, 0xFF //255
+
+//8진법(Octal)
+0o377 //255
+
+//2진법(Binary numeral system)
+0b11111111 //255
+
+//toFixed(0~100), 문자열로 반환
+let num = 0.3591;
+console.log(num.toFixed(3)); //0.359(문자열)
+console.log(num.toFixed(5)); //0.35910(문자열)
+console.log(Number(num.toFixed(5))); //0.3591(숫자형)
+console.log(+num.toFixed(5)); //0.3591(숫자형)
+
+//toString(2~36), 문자열로 반환
+let num = 255;
+(255).toString(2); 255..toString(2); //11111111
+num.toString(8); //377
+num.toString(16); //0xff
+```
+
+Math 객체
+```
+//절대값(Absolute Number)
+Math.abs(-10); //10
+
+//최대값(Maximum) 과 최소값(Minimum)
+Math.max(2, -1, 4, 5, 0); //5
+Math.min(2, -1, 4, 5, 0); //-1
+
+//거듭제곱(Exponentiation)
+Math.pow(2, 3); //8
+
+
+```
+
+
+
+
 
