@@ -233,8 +233,66 @@ Math.min(2, -1, 4, 5, 0); //-1
 //거듭제곱(Exponentiation)
 Math.pow(2, 3); //8
 
+//제곱근(Square Root)
+Math.sqrt(25); //5
 
+//반올림(Round)
+Math.round(2.49); //2
+Math.round(2.5); //3
+
+//버림과 올림(Floor and Ceil)
+Math.floor(2.4); //2
+Math.ceil(2.4); //3
+
+//난수(Random) //0이상 1미만 값이 랜덤으로 반환
+Math.random(); //0.785172717569619
+
+//min <= num < max
+Math.floor(Math.random() * (max - min)) + min;
+//min <= num <= max
+Math.floor(Math.random() * (max - min + 1)) + min;
 ```
+
+유의하기
+```
+let sum = 0.1 + 0.2;
+sum //0.30000000000......4
+//해결
+Number(sum.toFixed(1)); //0.3
++sum.toFixed(1); //0.3
+Math.round(sum*10) / 10; //0.3
+```
+
+문자열(string) 심화
+```
+let myString = 'Hi Codeit';
+
+myString.length;
+
+myString.indexOf('a'); //없으면 -1 반환
+myString.lastIndexOf('i'); //있으면 해당 인덱스 번호 반환
+
+myString[3];
+myString.charAt(3);
+
+myString.toUpperCase();
+myString.toLowerCase();
+
+myString.trim(); //앞, 뒤에 있는 공백을 전부제거
+
+myString.slice(0, 2); //Hi
+myString.slice(3); //Codeit
+```
+
+배열은 'mutable(바뀔 수 있는)' 자료형인 반면 문자열은 'immutable(바뀔 수 없는)' 자료형
+
+
+
+
+
+
+
+
 
 
 
