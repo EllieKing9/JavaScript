@@ -286,6 +286,75 @@ myString.slice(3); //Codeit
 
 배열은 'mutable(바뀔 수 있는)' 자료형인 반면 문자열은 'immutable(바뀔 수 없는)' 자료형
 
+기본형(Primitive type)과 참조형(Reference type)
+```
+//기본형
+Number, String, Boolen, Null, Undefined
+
+//참조형
+Object, Array
+
+let x = {name: 'Codeit'};
+let y = x;
+y.birth = 2017;
+console.log(x); //{name: 'Codeit', birth: 2017}
+console.log(y); //{name: 'Codeit', birth: 2017}
+```
+
+참조형 복사하기
+```
+let numbers1 = [1, 2, 3];
+let numbers2 = numbers1.slice();
+numbers2.push(4);
+console.log(numbers1); //[1, 2, 3]
+console.log(numbers2); //[1, 2, 3, 4]
+----------------------------------
+let course1 = {
+  title: '파이썬 프로그래밍',
+  language: 'Python'
+};
+let course2 = Object.assign({}, course1);
+course2.title = '알고리즘';
+console.log(course1);
+console.log(course2);
+----------------------------------
+function cloneObject(object) {
+  if (object === null || typeof object !== 'object'){
+    return object;
+  }
+
+  let temp = {};
+  if(Array.isArray(object)){
+    temp = [];
+  } else {
+    temp = {};
+  }
+
+  //for(let key in object){
+    //temp[key] = object[key];
+  //}
+  for(let key of Object.keys(object)) {
+    temp[key] = cloneObject(object[key])
+  }
+  return temp;
+}
+
+let course1 = {
+  title: '파이썬 프로그래밍',
+  language: 'Python',
+  prerequisite: []
+};
+let course2 = cloneObject(course1);
+course2.title = '자료구조';
+course2.prerequisite.push('프로그래밍 기초');
+console.log(course1);
+console.log(course2);
+```
+
+const, 변수와 상수 사이
+```
+
+```
 
 
 
